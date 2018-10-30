@@ -1,0 +1,98 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,700,600);
+
+body{
+  background: #3D5AFE;
+}
+body::after{
+  content: 'GitCard';
+  color:white;
+  font-size: 5em;
+  opacity: 0.1;
+  display: block;
+  text-align: center;
+  position: relative;
+  z-index: -1;
+  font-family: 'Titillium web' sans-serif;
+}
+.container{
+  background: #fff;
+  width:350px;
+  height:500px;
+  position: absolute;
+  left:50%;
+  transform: translate(-50%);
+  top:100px;
+  text-align:center;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  border-radius: 10px 10px 10px 10px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+.Header{
+  background: grey;
+  width:auto;
+  height:47%;
+  position: relative;
+}
+.search-bar{
+  padding: 15px;
+  text-align: center;
+  text-decoration-skip: edges;
+  font-size:15px;
+  border-radius: 0;
+  border: none;
+  position: absolute;
+  margin-top:230px;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index:1;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.Data{
+  position: relative;
+  top:10px;
+  font-family: "Titillium Web", sans-serif;
+}
+.Data h1 a{
+  color:#3D5AFE;
+  text-decoration: none;
+  font-size:35px;
+}
+.Data .location{
+  font-size: 1.1885rem;
+  font-weight: bolder;
+  position: relative;
+  top:-10px;
+  color: #bdcbce;
+}
+.ReposData{
+  background: transparent;
+  text-align: center;
+  padding: 1.875rem .9375rem;
+  bottom:0;
+  position: relative;
+  color:black;
+  float: left;
+
+}
+.ReposData span {
+  font-size: .844rem;
+  letter-spacing: .0625rem;
+  color: black;
+  display: block;
+  box-sizing: border-box;
+  width: calc(100% / 3);
+
+}
+.ReposData li{
+  list-style: none;
+  display: inline-block;
+  margin-right: 1rem;
+
+}
+.ReposData li i{
+  font-weight: bolder;
+}
+.ReposData li:last-child {
+  margin-right: 30px;
+}
