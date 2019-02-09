@@ -1,0 +1,211 @@
+body{
+    background-color: white;
+    color: #fff;
+    font-family: sans-serif;
+    font-style: 1rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    min-height: 100vh;
+    width: 90%;
+    transition:all 0.5s;
+}
+.toggle{
+    position: relative;
+    width:30px;
+    height:30px;
+    background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/265602/moon.svg) no-repeat;
+	background-size: contain;
+    background-color: #eee;
+    border-radius:50%;
+    border:none;
+    cursor: pointer;
+    transition: all 0.4s;
+} 
+.toggle:hover{
+    transform: scale(1.4, 1.4);
+}
+.svg{
+    transition: all 0.4s;
+    fill:white;
+}
+.svglight-mode:hover, .svgdark-mode:hover, .svg:hover{
+    transform: scale(1.5,1.5);
+}
+.svglight-mode{
+
+    transition: all 0.4s;
+    fill:black;
+
+}
+.svgdark-mode{
+
+    transition: all 0.4s;
+    fill:white;
+}
+.logo{
+    position: absolute;
+    float: right;
+    
+}
+.h3, .h3light-mode, .h3dark-mode{
+    position: absolute;
+    left:10%;
+    top:0%;
+    color:black;
+}
+.h3light-mode{
+    color:black;
+}
+.h3dark-mode{
+    color:white;
+}
+nav {
+    position: sticky;
+    top:0;
+    z-index:3;
+    background-color: white;
+    
+    overflow: hidden;
+    padding: 1em;
+    border-bottom: 1px solid #DAD7D6;
+}
+.navdark-mode{
+    background-color:#3a4f5b;
+}
+.navlight-mode{
+    background-color:white;
+}
+nav .navWide {
+    display: none;
+    margin: 0 auto;
+    float: right;
+}
+
+nav .navWide .wideDiv {
+    text-align: center;
+}
+nav .navWide .wideDiv a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 2em;
+}
+nav .navNarrow i {
+    float: left;
+    cursor: pointer;
+}
+nav .navNarrow .narrowLinks {
+    display: none;
+}
+nav .navNarrow .narrowLinks a {
+    text-decoration: none;
+    display: block;
+    float: left;
+    clear: left;
+    padding: 0.5em 0;
+}
+
+@media (min-width: 480px) {
+    .logo{
+        position: absolute;
+        float: left;
+        width: 2%;
+    }
+    nav .navWide {
+        display: block;
+    }
+    nav .navNarrow {
+        display: none;
+    }
+}
+.fa{
+    width:30px;
+    height:5px;
+    margin-top:0px;
+    background-color:black;
+    box-shadow:0px 7px 0px 0px  black, 0px -7px 0px 0px  black;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+input {
+    border: 0;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.search ,.searchlight-mode, .searchdark-mode{
+    font-size: 1.5rem;
+    margin: 1.5em auto 3em;
+    max-width: 80%;
+}
+
+.search [type='search'], .searchlight-mode [type='search'], .searchdark-mode [type='search'] {
+    border-radius:5px;
+    color:black;
+    padding: 0.5em 2em;
+    text-align: center;
+    width: 100%;
+    border:2px solid #DAD7D6;
+    transition: all 0.4s;
+    
+}
+.searchdark-mode [type='search']{
+    background-color:#131b20 ;
+}
+.searchlight-mode [type='search']{
+    background-color: white;
+}
+.movies {
+    display: grid;
+    grid-gap: 3em 2em;
+    grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: all 0.4s;
+}
+
+.movie__figure {
+    position: relative;
+}
+
+.movie__poster {
+    transition: all 0.4s;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.5em;
+}
+.movie__poster:hover{
+    
+    transform: scale(1.1,1.1);
+}
+.movie__vote {
+    align-items: center;
+    background-color:#FE7F00;
+    border-radius: 50%;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.25);
+    display: flex;
+    height: 2.25em;
+    justify-content: center;
+    padding: 0.5em;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    top: 75%;
+    transform: translateX(50%);
+    width: 2.25em;
+}
+.movie__title {
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin: 0;
+}
+
